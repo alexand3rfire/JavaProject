@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Send</title>
+</head>
+<body>
+    <h1>Send</h1>
+    <ul>
+        <li th:each="Send : ${result}">
+            <a th:href="@{/dataService/{text}(text=${Send.text})}" th:text="${Send.text}">${Send.text} ${Send.rate}</a>
+        </li>
+    </ul>
+</body>
+</html>
